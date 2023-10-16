@@ -4,7 +4,7 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - black --check --exclude SRC myvenv
+  - black --check --exclude SRC /home/travis/build/dc5212/swe1-app/myvenv
   #- flake8 --exclude=migrations .
   # - pytest
   - coverage run --source=mysite,polls, manage.py test
