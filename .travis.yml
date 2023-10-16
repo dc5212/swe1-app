@@ -6,11 +6,11 @@ install:
 script:
 #  - black --check .
 #  - flake8 --exclude=migrations .
-  - pytest
+  # - pytest
   - coverage run --source=mysite,polls, manage.py test
 
 after_script:
-  # - python -m coveralls
+  - python -m coveralls
 
 deploy:
   provider: elasticbeanstalk
